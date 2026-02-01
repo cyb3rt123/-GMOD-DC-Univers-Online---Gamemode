@@ -1,0 +1,14 @@
+{
+	"title": "DCUO-RP Content Pack",
+	"type": "ServerContent",
+	"tags": [
+		"roleplay",
+		"realism"
+	],
+	"ignore": [
+		"*.psd",
+		"*.txt",
+		"*.md",
+		".git/*"
+	]
+}

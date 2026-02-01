@@ -1,0 +1,80 @@
+"dcuorp"
+{
+	"base"		"sandbox"
+	"title"		"DCUO-RP | DC Universe Online Roleplay"
+	"author"	"DCUO-RP Team"
+	"version"	"1.0.0"
+	"description"	"Un gamemode roleplay super-héros complet et immersif inspiré de DC Universe Online"
+	"maps"		"^rp_|^gm_"
+	"category"	"roleplay"
+	"menusystem"	"1"
+	"workshopid"	""
+	
+	"settings"
+	{
+		1
+		{
+			"name"		"dcuo_maxlevel"
+			"text"		"Niveau Maximum"
+			"help"		"Le niveau maximum que les joueurs peuvent atteindre"
+			"type"		"Numeric"
+			"default"	"50"
+		}
+		2
+		{
+			"name"		"dcuo_basexp"
+			"text"		"XP de Base"
+			"help"		"XP de base pour le niveau 1"
+			"type"		"Numeric"
+			"default"	"100"
+		}
+		3
+		{
+			"name"		"dcuo_cinematic_enabled"
+			"text"		"Cinématique d'Intro"
+			"help"		"Activer la cinématique d'introduction"
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+		4
+		{
+			"name"		"dcuo_xp_multiplier"
+			"text"		"Multiplicateur d'XP"
+			"help"		"Multiplicateur de gain d'expérience"
+			"type"		"Numeric"
+			"default"	"1"
+		}
+		5
+		{
+			"name"		"dcuo_starting_money"
+			"text"		"Argent de Départ"
+			"help"		"Argent donné aux nouveaux joueurs"
+			"type"		"Numeric"
+			"default"	"500"
+		}
+		6
+		{
+			"name"		"dcuo_pvp_enabled"
+			"text"		"PvP Activé"
+			"help"		"Activer le combat joueur contre joueur"
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+		7
+		{
+			"name"		"dcuo_stamina_enabled"
+			"text"		"Système de Stamina"
+			"help"		"Activer le système de stamina pour le combat"
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+		8
+		{
+			"name"		"dcuo_bosses_enabled"
+			"text"		"Spawn des Boss"
+			"help"		"Activer l'apparition automatique des boss"
+			"type"		"CheckBox"
+			"default"	"1"
+		}
+	}
+}

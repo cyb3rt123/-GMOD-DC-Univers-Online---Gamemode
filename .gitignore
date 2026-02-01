@@ -1,0 +1,82 @@
+# Garry's Mod Server Files
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.txt~
+
+# Lua Cache
+lua_cache/
+cache/
+
+# Workshop
+workshop/
+
+# Server Logs
+logs/
+garrysmod/console.log
+garrysmod/errors.txt
+
+# Server Config (contains passwords/keys)
+server.cfg
+autoexec.cfg
+
+# Downloads
+downloads/
+downloadlists/
+
+# Data (player data - keep local only)
+data/
+garrysmod/data/
+
+# Screenshots
+screenshots/
+
+# Demos
+demos/
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+~*
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Build artifacts
+*.vpk
+*.bz2
+*.zip
+
+# Personal notes and documentation (already in README)
+DIAGNOSTIC_*.md
+BOSS_SYSTEM_FIX.md
+CORRECTIFS_*.md
+DCUO_PHONE_GUIDE.md
+MISSION_SPAWN_FIX.md
+PHONE_FIX.md
+FIX_MAINTENANT.txt
+GUIDE_*.txt
+SIMPLIFICATION_*.txt
+SOLUTIONS_IMMEDIATES.md
+TROUBLESHOOTING_*.md
+WORKSHOP_*.txt
+ADDON_WORKSHOP_README.txt
+LANCEMENT_SERVEUR.md
+
+# Batch files (local server start)
+START_*.bat
+*.bat
+
+# Keep these
+!.gitignore
+!README.md
+!LICENSE
