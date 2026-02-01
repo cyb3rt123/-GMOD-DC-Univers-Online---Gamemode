@@ -177,8 +177,9 @@ function DCUO.Guilds.OpenMenu()
             
             surface.PlaySound("UI/buttonclick.wav")
             
-            net.Start("DCUO:Guilds:Create")
+            net.Start("DCUO:Guild:Create")
             net.WriteString(name)
+            net.WriteString("")
             net.WriteString("")
             net.SendToServer()
             
@@ -254,6 +255,27 @@ end
 concommand.Add("dcuo_guilds", function()
     if DCUO.Guilds and DCUO.Guilds.OpenMenu then
         DCUO.Guilds.OpenMenu()
+    end
+end)
+
+-- Réception des données de guilde du serveur
+net.Receive("DCUO:Guild:Sync", function()
+    local data = net.ReadTable()
+    DCUO.Guilds.List = data or {}
+    
+    -- Mettre à jour les données du joueur local
+    local ply = LocalPlayer()
+    if IsValid(ply) then
+        local sid = ply:SteamID()
+        for guildID, guild in pairs(DCUO.Guilds.List) do
+            if guild.members and guild.members[sid] then
+                DCUO.Guilds.PlayerData[tostring(ply:SteamID64() or "")] = {
+                    guild = guild,
+                    guildID = guildID
+                }
+                break
+            end
+        end
     end
 end)
 

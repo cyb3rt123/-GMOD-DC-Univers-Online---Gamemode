@@ -7,8 +7,7 @@
 
 if CLIENT then return end
 
--- Réseau
-util.AddNetworkString("DCUO:ServerAnnounce")
+-- NetworkStrings (DCUO:ServerAnnounce déjà déclaré dans shared.lua)
 
 -- ╔═══════════════════════════════════════════════════════════════════╗
 -- ║                    VÉRIFIER LES PERMISSIONS                       ║

@@ -10,8 +10,7 @@ if CLIENT then return end
 DCUO.Bosses = DCUO.Bosses or {}
 DCUO.Bosses.Active = {}
 
-util.AddNetworkString("DCUO:BossSpawned")
-util.AddNetworkString("DCUO:BossKilled")
+-- NetworkStrings pour Boss (les principales sont déjà dans shared.lua)
 util.AddNetworkString("DCUO:BossHealth")
 util.AddNetworkString("DCUO:BossWaypoint")
 

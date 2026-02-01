@@ -250,6 +250,9 @@ function DCUO.Database.LoadPlayer(ply, callback)
     -- Charger les succès
     DCUO.Database.LoadPlayerAchievements(ply)
     
+    -- Synchroniser le niveau via NetworkedVars pour le scaling
+    ply:SetNWInt("DCUO_Level", ply.DCUOData.level or 1)
+    
     -- Envoyer les données au client
     timer.Simple(0.5, function()
         if IsValid(ply) then

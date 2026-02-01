@@ -58,6 +58,9 @@ function DCUO.XP.Give(ply, amount, reason)
     
     -- Si level up, envoyer la notification
     if leveledUp then
+        -- Mettre à jour le niveau réseau pour le scaling
+        ply:SetNWInt("DCUO_Level", data.level)
+        
         net.Start("DCUO:UpdateLevel")
             net.WriteInt(data.level, 16)
             net.WriteBool(true)
@@ -71,8 +74,8 @@ function DCUO.XP.Give(ply, amount, reason)
         -- Effets visuels et sonores
         DCUO.XP.LevelUpEffects(ply)
         
-        -- Hook pour d'autres systèmes
-        hook.Run("DCUO:PlayerLevelUp", ply, oldLevel, data.level)
+        -- Hook pour d'autres systèmes (newLevel, oldLevel)
+        hook.Run("DCUO:PlayerLevelUp", ply, data.level, oldLevel)
     else
         -- Simple notification d'XP gagnée
         local msg = "+ " .. amount .. " XP"

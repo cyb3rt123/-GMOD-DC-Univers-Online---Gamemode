@@ -83,7 +83,7 @@ timer.Create("DCUO_HealthRegen", 2, 0, function()
             local maxHealth = ply:GetMaxHealth()
             
             -- Régénérer si pas en combat
-            local lastDamage = ply.LastDamageTaken or 0
+            local lastDamage = ply.DCUO_LastDamageTaken or 0
             if health < maxHealth and CurTime() - lastDamage > 5 then
                 ply:SetHealth(math.min(maxHealth, health + 5))
             end
@@ -105,7 +105,7 @@ end)
 
 hook.Add("EntityTakeDamage", "DCUO:TrackDamage", function(target, dmg)
     if target:IsPlayer() then
-        target.LastDamageTaken = CurTime()
+        target.DCUO_LastDamageTaken = CurTime()
     end
 end)
 

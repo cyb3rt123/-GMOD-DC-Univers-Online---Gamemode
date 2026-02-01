@@ -403,7 +403,26 @@ if auras[auraId] then  -- O(1)
 
 ---
 
-## 📝 RECOMMANDATIONS FINALES
+## � CORRECTIONS ADDITIONNELLES (Session 2)
+
+### 11. Nettoyage des NetworkStrings dupliquées dans shared.lua
+**Fichier:** `gamemode/shared.lua`
+**Problème:** Les NetworkStrings `DCUO_SendDuelRequest`, `DCUO_RemoveFriend`, `DCUO_SendFriendRequest` et `DCUO:Guilds:Create` étaient déclarées dans shared.lua alors qu'elles l'étaient déjà dans leurs fichiers sv_* respectifs.
+**Solution:** Suppression des doublons, ajout de commentaires documentant où chaque NetworkString est déclarée.
+
+### 12. Initialisation des timers de régénération
+**Fichier:** `systems/sv_scaling.lua`
+**Problème:** Les timers de régénération pouvaient ne pas démarrer correctement au spawn
+**Solution:** Ajout d'un hook `InitPostEntity` pour initialiser les timers au démarrage du serveur
+
+### 13. Receiver Guild:Sync ajouté côté client
+**Fichier:** `lua/autorun/client/cl_f2_simple.lua`
+**Problème:** Le client n'avait pas de net.Receive pour `DCUO:Guild:Sync`
+**Solution:** Ajout d'un receiver qui met à jour `DCUO.Guilds.List` et `DCUO.Guilds.PlayerData`
+
+---
+
+## �📝 RECOMMANDATIONS FINALES
 
 ### Court Terme (24h)
 1. Remplacer `TON_WORKSHOP_ID_ICI` par l'ID réel

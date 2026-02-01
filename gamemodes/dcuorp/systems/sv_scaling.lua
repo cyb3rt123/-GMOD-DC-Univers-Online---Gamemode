@@ -55,7 +55,7 @@ hook.Add("PlayerSpawn", "DCUO_Scaling_OnSpawn", function(ply)
 end)
 
 -- Appliquer le scaling au level up
-hook.Add("DCUO_PlayerLevelUp", "DCUO_Scaling_OnLevelUp", function(ply, newLevel, oldLevel)
+hook.Add("DCUO:PlayerLevelUp", "DCUO_Scaling_OnLevelUp", function(ply, newLevel, oldLevel)
     DCUO.Scaling.ApplyScaling(ply)
     
     -- Notifier le joueur
@@ -89,10 +89,10 @@ end)
 -- ║                     RÉGÉNÉRATION SCALÉE                           ║
 -- ╚═══════════════════════════════════════════════════════════════════╝
 
--- Modifier la régénération selon le niveau (si le système existe)
-if DCUO.Stamina then
+-- Initialisation au démarrage du serveur pour remplacer la régénération de base
+hook.Add("InitPostEntity", "DCUO_Scaling_SetupRegen", function()
     -- Remplacer le timer de regen standard par un scalé
-    timer.Remove("DCUO_Stamina_HealthRegen") -- Supprimer l'ancien
+    timer.Remove("DCUO_HealthRegen") -- Supprimer l'ancien timer de sv_stamina.lua
     
     timer.Create("DCUO_Scaling_HealthRegen", 2, 0, function()
         for _, ply in ipairs(player.GetAll()) do
@@ -115,4 +115,6 @@ if DCUO.Stamina then
             end
         end
     end)
-end
+    
+    DCUO.Log("Scaled health regen timer initialized", "SUCCESS")
+end)

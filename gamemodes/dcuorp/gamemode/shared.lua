@@ -54,6 +54,7 @@ DCUO.Colors = {
     Success = Color(46, 204, 113),       -- Vert succès
     Warning = Color(243, 156, 18),       -- Orange avertissement
     Error = Color(231, 76, 60),          -- Rouge erreur
+    Info = Color(52, 152, 219),          -- Bleu info
     XP = Color(155, 89, 182),            -- Violet XP
     Transparent = Color(0, 0, 0, 200)    -- Noir transparent
 }
@@ -158,10 +159,11 @@ if SERVER then
     -- Ajout des NetworkStrings manquants (CRITIQUE)
     util.AddNetworkString("DCUO:PowerEquip")
     util.AddNetworkString("DCUO:PowerUnequip")
-    util.AddNetworkString("DCUO_SendDuelRequest")
-    util.AddNetworkString("DCUO_RemoveFriend")
-    util.AddNetworkString("DCUO_SendFriendRequest")
-    util.AddNetworkString("DCUO:Guilds:Create")
+    -- Note: Les NetworkStrings suivantes sont déclarées dans leurs fichiers respectifs:
+    -- DCUO_SendDuelRequest -> sv_duel.lua
+    -- DCUO_RemoveFriend -> sv_friends.lua
+    -- DCUO_SendFriendRequest -> sv_friends.lua
+    -- DCUO:Guild:* -> sv_guilds.lua
     util.AddNetworkString("DCUO:ServerAnnounce")
     util.AddNetworkString("DCUO:BossSpawned")
     util.AddNetworkString("DCUO:BossKilled")

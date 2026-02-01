@@ -92,22 +92,6 @@ DCUO.Powers.List["batman"] = {
     color = Color(30, 30, 30),
 }
 
--- ╔═══════════════════════════════════════════════════════════════════╗
--- ║                    FONCTIONS UTILITAIRES                          ║
--- ╚═══════════════════════════════════════════════════════════════════╝
-
-function DCUO.Powers.Get(powerID)
-    return DCUO.Powers.List[powerID]
-end
-
-function DCUO.Powers.GetWeapon(powerID)
-    return DCUO.Powers.WeaponMap[powerID]
-end
-
-function DCUO.Powers.GetAll()
-    return DCUO.Powers.List
-end
-
 -- ═══ VISION THERMIQUE ═══
 DCUO.Powers.List["heat_vision"] = {
     id = "heat_vision",
@@ -255,6 +239,10 @@ DCUO.Powers.List["tornado"] = {
 
 function DCUO.Powers.Get(powerID)
     return DCUO.Powers.List[powerID]
+end
+
+function DCUO.Powers.GetWeapon(powerID)
+    return DCUO.Powers.WeaponMap[powerID]
 end
 
 function DCUO.Powers.GetAll()

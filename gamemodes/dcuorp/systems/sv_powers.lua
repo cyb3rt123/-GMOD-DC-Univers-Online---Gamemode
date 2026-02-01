@@ -377,8 +377,7 @@ net.Receive("DCUO:PowerActivate", function(len, ply)
 end)
 
 -- Recevoir l'équipement de pouvoir (nouveau système SWEP)
-util.AddNetworkString("DCUO:PowerEquip")
-util.AddNetworkString("DCUO:PowerUnequip")
+-- NetworkStrings déjà déclarées dans shared.lua
 
 net.Receive("DCUO:PowerEquip", function(len, ply)
     local powerID = net.ReadString()
