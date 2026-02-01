@@ -3,8 +3,21 @@
 [![Garry's Mod](https://img.shields.io/badge/Garry's%20Mod-Gamemode-blue.svg)](https://gmod.facepunch.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-In%20Development-yellow.svg)]()
+[![Discord](https://img.shields.io/discord/YOUR_SERVER_ID?color=7289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/wYEaHJKUVs)
 
 > **Un gamemode roleplay immersif inspiré de l'univers DC Comics pour Garry's Mod**
+
+<div align="center">
+
+## 🎮 REJOIGNEZ NOTRE COMMUNAUTÉ !
+
+### 💬 [CLIQUEZ ICI POUR REJOINDRE LE DISCORD](https://discord.gg/wYEaHJKUVs) 💬
+
+**Support • Aide • Tutoriels • Communauté • Mises à jour**
+
+[![Join Discord](https://img.shields.io/badge/Rejoindre%20le%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/wYEaHJKUVs)
+
+</div>
 
 ---
 
@@ -390,11 +403,22 @@ Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour plu
 
 ## 📞 Support & Contact
 
-**Problèmes connus** : Voir [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+### 💬 Discord - Support & Communauté
 
-**Rapporter un bug** : Ouvrez une [Issue](https://github.com/VotreNom/dcuo-rp/issues)
+[![Join Discord](https://img.shields.io/badge/Rejoindre%20le%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/wYEaHJKUVs)
 
-**Discord** : [Votre serveur Discord]
+**Serveur Discord officiel** : https://discord.gg/wYEaHJKUVs
+
+- ✅ Support technique
+- ✅ Aide à l'installation
+- ✅ Suggestions et idées
+- ✅ Annonces de mises à jour
+- ✅ Communauté active
+- ✅ Tutoriels et guides
+
+### 🐛 Rapporter un Bug
+
+**GitHub Issues** : [Ouvrir une Issue](https://github.com/cyb3rt123/-GMOD-DC-Univers-Online---Gamemode/issues)
 
 ---
 
